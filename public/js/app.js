@@ -4,7 +4,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
     e.preventDefault();
     messageOne.innerHTML = 'Loading...';
     const value = document.querySelector('input').value;
-    fetch('http://localhost:3000/weather?address=' + value)
+    fetch('/weather?address=' + value)
         .then(bolb => bolb.json())
         .then(data => {
             if (data.error)
